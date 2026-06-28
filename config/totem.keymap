@@ -22,6 +22,17 @@
 };
 
 / {
+    behaviors {
+        mo_kp: mo_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_KP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,19 +40,19 @@
 
         base {
             bindings = <
-                  &kp Q  &kp W  &kp E     &kp R  &kp T    &kp Y      &kp U            &kp I          &kp O    &kp P
-                  &kp A  &kp S  &kp D     &kp F  &kp G    &kp H      &kp J            &kp K          &kp L    &kp SEMI
-&mt LCTRL ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B    &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp APOS
-                                &kp LGUI  &mo 4  &mo 3    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+                  &kp Q  &kp W  &kp E         &kp R      &kp T                     &kp Y        &kp U        &kp I          &kp O    &kp P
+                  &kp A  &kp S  &kp D         &kp F      &kp G                     &kp H        &kp J        &kp K          &kp L    &kp SEMI
+&mt LCTRL ESCAPE  &kp Z  &kp X  &kp C         &kp V      &kp B                     &kp N        &kp M        &kp COMMA      &kp DOT  &kp FSLH  &mt ENTER RIGHT_SHIFT
+                                &lt 4 ESCAPE  &lt 1 TAB  &mt LEFT_GUI BACKSPACE    &lt 3 SPACE  &lt 2 ENTER  &kp RIGHT_ALT
             >;
         };
 
         lower {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6   &kp N7     &kp N8     &kp N9    &kp N0
+        &kp LEFT_GUI  &kp LALT      &kp LSHFT     &kp LCTRL     &trans    &kp BACKSLASH  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+&trans  &trans        &trans        &trans        &trans        &trans    &kp GRAVE      &kp SQT    &trans     &trans    &kp SLASH  &trans
+                                    &trans        &trans        &trans    &trans         &trans     &trans
             >;
         };
 
@@ -86,15 +97,6 @@
         extra2 { status = "reserved"; };
 
         extra3 { status = "reserved"; };
-
-        layer_9 {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
