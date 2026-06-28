@@ -69,7 +69,7 @@
         &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
         &kp LEFT_GUI  &kp LALT    &kp LSHFT      &kp LCTRL     &trans           &kp LS(PIPE)   &kp LS(UNDER)  &kp LS(PLUS)  &kp LS(LBRC)  &kp LS(RBRC)
 &trans  &trans        &trans      &trans         &trans        &trans           &kp LS(TILDE)  &kp LS(DQT)    &trans        &trans        &kp LS(QMARK)  &trans
-                                  &trans         &trans        &trans           &trans         &trans         &trans
+                                  &trans         &trans        &kp DELETE       &trans         &trans         &trans
             >;
         };
 
