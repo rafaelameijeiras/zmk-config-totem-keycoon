@@ -53,7 +53,7 @@
         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6   &kp N7     &kp N8     &kp N9    &kp N0
         &kp LEFT_GUI  &kp LALT      &kp LSHFT     &kp LCTRL     &trans    &kp BACKSLASH  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
 &trans  &trans        &trans        &trans        &trans        &trans    &kp GRAVE      &kp SQT    &trans     &trans    &kp SLASH  &trans
-                                    &trans        &trans        &trans    &trans         &trans     &trans
+                                    &trans        &trans        &mo 5     &trans         &trans     &trans
             >;
         };
 
@@ -113,8 +113,8 @@
         compatible = "zmk,conditional-layers";
 
         device {
-            if-layers = <4 4>;
-            then-layer = <5>;
+            if-layers = <1 2>;
+            then-layer = <6>;
         };
     };
 };
