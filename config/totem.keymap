@@ -55,8 +55,24 @@
             hold-trigger-on-release;
         };
 
+        thumb_mt: thumb_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        thumb_lt: thumb_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+        };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
