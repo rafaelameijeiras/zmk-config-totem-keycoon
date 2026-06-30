@@ -51,7 +51,7 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
-        };k
+        };
     };
 
     keymap {
