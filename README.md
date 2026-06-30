@@ -4,6 +4,8 @@
 
 The TOTEM is a 38-key column-staggered split. This repo contains your keymap, the hardware configuration, and the build pipeline. ZMK, Zephyr, and the ARM toolchain are downloaded automatically.
 
+This is the URL provided by the seller: https://suns-shave-80u.craft.me/NDKH6lhuW8BzBi
+
 ---
 
 ## Quick path
